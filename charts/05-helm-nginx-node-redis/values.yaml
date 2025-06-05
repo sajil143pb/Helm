@@ -1,0 +1,25 @@
+
+
+node:
+  image: pbsajil/node
+  port: 5000
+  replicaCount: 3
+
+redis:
+  image: redis:latest
+  port: 6379
+  replicaCount: 1
+
+nginx:
+  image: nginx:latest
+  port: 80
+  servicePort: 80
+  replicaCount: 1
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 150Mi
+  requests:
+    cpu: 200m
+    memory: 150Mi
