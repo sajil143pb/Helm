@@ -32,7 +32,7 @@ jobs:
 
       - name: Update Helm repo index
         run: |
-          helm repo index packaged --url https://sajil143pb.github.io/Helm/
+          helm repo index docs --url https://sajil143pb.github.io/Helm/
 
       - name: Commit and push changes
         run: |
