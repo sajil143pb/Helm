@@ -7,7 +7,9 @@ spec:
     app: node
   ports:
     - protocol: TCP
-      name: metrics
       port: 80
       targetPort: {{ .Values.node.port }}
+    - name: metrics       # Prometheus metrics
+      port: 5001
+      targetPort: 5000
   type: ClusterIP
