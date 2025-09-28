@@ -27,17 +27,17 @@ jobs:
 
       - name: Package Helm chart
         run: |
-          mkdir -p packaged
-          helm package charts/* --destination packaged
+          mkdir -p docs
+          helm package charts/nginx-node-redis-helm-chart --destination docs
 
       - name: Update Helm repo index
         run: |
           helm repo index packaged --url https://sajil143pb.github.io/Helm/
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: packaged
-          force_orphan: true
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "chore: update helm chart package and index [skip ci]" || echo "No changes to commit"
+          git push
