@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  nginx-node-redis-helm-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-28T09:24:02.292293684Z"
+    description: A nodejs + redis application with nginx ingress controller using
+      Helm.
+    digest: 29f6e467378a78b231673ad660e86ecac0585e4af84bfa5366f394d0126dcfac
+    name: nginx-node-redis-helm-chart
+    type: application
+    urls:
+    - https://sajil143pb.github.io/Helm/nginx-node-redis-helm-chart-0.1.2.tgz
+    version: 0.1.2
+generated: "2025-09-28T09:24:02.291931377Z"
