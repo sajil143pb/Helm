@@ -4,6 +4,7 @@ metadata:
   name: node-service-monitor
   labels:
     app.kubernetes.io/instance: prometheus-stack
+    release: prometheus-stack
 spec:
   selector:
     matchLabels:
