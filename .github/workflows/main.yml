@@ -28,7 +28,7 @@ jobs:
       - name: Package Helm chart
         run: |
           mkdir -p docs
-          helm package charts/nginx-node-redis-helm-chart --destination docs
+          helm package charts/* --destination docs
 
       - name: Update Helm repo index
         run: |
