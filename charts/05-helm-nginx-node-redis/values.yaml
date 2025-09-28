@@ -1,7 +1,7 @@
 
 
 node:
-  image: pbsajil/node
+  image: pbsajil/node:v1.0
   port: 5000
   replicaCount: 3
 
