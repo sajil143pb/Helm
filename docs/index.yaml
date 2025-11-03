@@ -26,12 +26,12 @@ entries:
   nodeapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-11-03T17:48:50.585632487Z"
+    created: "2025-11-03T17:15:25.47909978Z"
     description: A Helm chart for Kubernetes
-    digest: 48970253ea051b31b67b35cd906ddb5376a78da4fc3d495a234c557afe5d4bd7
+    digest: 14d4915beddbb494a83be2bcbb237183422814625edc8eae4a200a681ef4821c
     name: nodeapp
     type: application
     urls:
     - https://sajil143pb.github.io/Helm/nodeapp-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-03T17:48:50.584512829Z"
+generated: "2025-11-03T17:15:25.47813783Z"
