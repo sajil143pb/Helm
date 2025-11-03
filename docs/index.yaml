@@ -3,7 +3,7 @@ entries:
   nginx-node-redis-helm-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-07T17:41:33.748336903Z"
+    created: "2025-11-03T22:44:53.388278+05:30"
     description: A nodejs + redis application with nginx ingress controller using
       Helm.
     digest: 01839e10da4803dbbfbf5386048f2a99bf51622d0d7ca9cfa98bed2284fc6d36
@@ -14,7 +14,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-07T17:41:33.748091123Z"
+    created: "2025-11-03T22:44:53.387777+05:30"
     description: A nodejs + redis application with nginx ingress controller using
       Helm.
     digest: 4b8763a74185c368b2caaf05aed0c00b07850180ffbbbce38d252b5514308327
@@ -23,4 +23,15 @@ entries:
     urls:
     - https://sajil143pb.github.io/Helm/nginx-node-redis-helm-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2025-10-07T17:41:33.747693559Z"
+  nodeapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-11-03T22:44:53.388501+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 374e3cebf560f199e16f339c76c68cb415f726d899c1ca019d25f88cb46f747e
+    name: nodeapp
+    type: application
+    urls:
+    - https://sajil143pb.github.io/Helm/nodeapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-11-03T22:44:53.386412+05:30"
