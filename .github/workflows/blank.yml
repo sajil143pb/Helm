@@ -1,0 +1,62 @@
+name: Release Helm Chart
+
+on:
+  push:
+    paths:
+      - 'charts/**'
+    branches:
+      - main
+  workflow_dispatch:
+
+
+permissions:
+  contents: write
+  pages: write       # ✅ required for Pages deploy
+  id-token: write    # ✅ required for Pages authentication
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      - name: Prepare docs folder
+        run: mkdir -p docs
+
+      - name: Download existing index.yaml (if present)
+        run: |
+          git fetch origin main || true
+          git checkout origin/main -- docs/index.yaml || echo "No existing index.yaml"
+
+      - name: Package Helm charts
+        run: |
+          helm package charts/* --destination docs
+
+      - name: Merge and update index.yaml
+        run: |
+          helm repo index docs \
+            --url https://sajil143pb.github.io/Helm/ \
+            --merge docs/index.yaml || helm repo index docs --url https://sajil143pb.github.io/Helm/
+
+      # ✅ Upload generated Helm repo as Pages artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      # ✅ Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
