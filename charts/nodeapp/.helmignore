@@ -20,5 +20,5 @@
 .project
 .idea/
 *.tmproj
-.vscode/
+.vscode/ 
 
