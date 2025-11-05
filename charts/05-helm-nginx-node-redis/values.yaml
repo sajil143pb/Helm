@@ -1,10 +1,5 @@
 node:
-  image:
-    repository: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation
-    # This sets the pull policy for images.
-    pullPolicy: IfNotPresent
-    # Overrides the image tag whose default is the chart appVersion.
-    tag: "latest"
+  image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:latest
   port: 5000
   replicaCount: 3
   type: ClusterIP
