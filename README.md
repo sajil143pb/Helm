@@ -1,6 +1,10 @@
 # Helm
 This repository contains the Helm charts
 
+How to install it?
+ helm repo add Helm https://sajil143pb.github.io/Helm/
+ helm repo update
+
 How to create a page in Github to store the Heml chart?
 
 we need to keep a structure " charts and docs " 
