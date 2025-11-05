@@ -8,7 +8,9 @@ This repository contains the Helm charts
  helm repo update
 </pre>
 
-# Install or upgrade the AWS Load Balancer Controller into kube-system
+# Other charts and examples
+
+# 1. Install or upgrade the AWS Load Balancer Controller into kube-system
 <pre>
 helm repo add eks https://aws.github.io/eks-charts
 helm repo update
