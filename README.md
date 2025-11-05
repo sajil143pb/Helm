@@ -1,5 +1,5 @@
 # Helm
-This repository contains the Helm charts
+This repository contains the Helm charts for a sample application running on node-redis-nginx application for
 
 # How to install it?
 
