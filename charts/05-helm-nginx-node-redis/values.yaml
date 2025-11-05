@@ -8,26 +8,12 @@ node:
   port: 5000
   replicaCount: 3
   type: ClusterIP
-  resources:
-    limits:
-      cpu: 500m
-      memory: 512Mi
-    requests:
-      cpu: 200m
-      memory: 256Mi
 
 redis:
   image: public.ecr.aws/docker/library/redis:8.4-rc1-alpine
   port: 6379
   replicaCount: 1
   type: ClusterIP
-  resources:
-    limits:
-      cpu: 500m
-      memory: 512Mi
-    requests:
-      cpu: 200m
-      memory: 256Mi
 
 nginx:
   image: public.ecr.aws/nginx/nginx:mainline
@@ -35,13 +21,6 @@ nginx:
   servicePort: 80
   replicaCount: 1
   type: ClusterIP
-  resources:
-    limits:
-      cpu: 500m
-      memory: 512Mi
-    requests:
-      cpu: 200m
-      memory: 256Mi
   ingress:
     enabled: true
     className: "alb"
