@@ -16,7 +16,6 @@ nginx:
   servicePort: 80
   replicaCount: 1
   type: ClusterIP
-
   ingress:
     enabled: true
     className: "alb"

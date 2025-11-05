@@ -9,4 +9,4 @@ spec:
       - protocol: TCP
         port: 80
         targetPort: {{ .Values.nginx.port }}
-    type: NodePort
+    type: {{ .Values.nginx.type }}
