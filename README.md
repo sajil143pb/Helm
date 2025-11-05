@@ -8,14 +8,13 @@ This repository contains the Helm charts
  helm repo update
 </pre>
 
-
 #Installing the AWS Load Balancer Controller (Ingress Controller)
 
 # Add the EKS Helm repository and update
 <pre>
 helm repo add eks https://aws.github.io/eks-charts
 helm repo update
- </pre>
+</pre>
 
 # Install or upgrade the AWS Load Balancer Controller into kube-system
 
@@ -25,5 +24,5 @@ helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-contro
   --set clusterName=java-eks \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller
-  </pre>
+</pre>
 
