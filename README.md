@@ -4,7 +4,6 @@ This repository contains the Helm charts
 # How to install it?
 
 <pre>
-```bash
  helm repo add Helm https://sajil143pb.github.io/Helm/
  helm repo update
 </pre>
