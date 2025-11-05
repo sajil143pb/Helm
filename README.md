@@ -12,13 +12,16 @@ git commit -m "Add packaged chart and index.yaml"
 git push origin main
 
 
-How to install ingress controller in the cluster?
+🌐 Installing the AWS Load Balancer Controller (Ingress Controller)
 
+# Add the EKS Helm repository and update
 helm repo add eks https://aws.github.io/eks-charts
 helm repo update
 
+# Install or upgrade the AWS Load Balancer Controller into kube-system
 helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-controller \
   -n kube-system \
   --set clusterName=java-eks \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller
+
