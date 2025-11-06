@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mychart.fullname" . }}-node
+  labels:
+    app: node
+spec:
+  replicas: {{ .Values.node.replicaCount }}
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+        - name: node
+          image: "{{ .Values.node.image.repository }}:{{ .Values.node.image.tag }}"
+          imagePullPolicy: {{ .Values.node.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.node.port }}
+          resources:
+            {{- toYaml .Values.node.resources | nindent 12 }}

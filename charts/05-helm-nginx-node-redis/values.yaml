@@ -16,18 +16,19 @@ nginx:
   servicePort: 80
   replicaCount: 1
   type: ClusterIP
-  ingress:
-    enabled: true
-    className: "alb"
-    annotations:
-      kubernetes.io/ingress.class: alb
-      alb.ingress.kubernetes.io/scheme: internet-facing
-      alb.ingress.kubernetes.io/target-type: ip
-    hosts:
-      - host: dev.devops-s.live
-        paths:
-          - path: / 
-            pathType: Prefix
+  
+ingress:
+  enabled: true
+  className: "alb"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+  hosts:
+    - host: dev.devops-s.live
+      paths:
+        - path: / 
+          pathType: Prefix
 resources:
   limits:
     cpu: 500m
