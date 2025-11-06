@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: node
-          image: "{{ .Values.node.image.repository }}:{{ .Values.node.image.tag }}"
-          imagePullPolicy: {{ .Values.node.image.pullPolicy }}
+          image: {{ .Values.node.image}}
           ports:
             - containerPort: {{ .Values.node.port }}
           resources:
