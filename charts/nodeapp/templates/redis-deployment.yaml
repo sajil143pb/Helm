@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mychart.fullname" . }}-redis
+  name: {{ .Values.redis.name }}
   labels:
     app: redis
 spec:

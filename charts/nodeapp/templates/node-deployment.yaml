@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mychart.fullname" . }}-node
+  name: {{ .Values.node.name }}
   labels:
     app: node
 spec:

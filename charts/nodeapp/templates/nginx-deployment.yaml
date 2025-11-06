@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "mychart.fullname" . }}-nginx
+  name: {{ include .Values.nginx.name }}
   labels:
     app: nginx
 spec:

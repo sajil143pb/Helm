@@ -2,6 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 node:
+  name: node
   image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:latest
   port: 5000
   replicaCount: 3
@@ -15,6 +16,7 @@ node:
     memory: 256Mi
 
 redis:
+  name: redis
   image: public.ecr.aws/docker/library/redis:8.4-rc1-alpine
   port: 6379
   replicaCount: 1
@@ -28,6 +30,7 @@ redis:
     memory: 256Mi
 
 nginx:
+  name: nginx
   image: public.ecr.aws/nginx/nginx:mainline
   port: 80
   servicePort: 80
