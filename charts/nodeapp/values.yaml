@@ -17,7 +17,7 @@ node:
 
 redis:
   name: redis
-  image: public.ecr.aws/docker/library/redis:8.4-rc1-alpine
+  image: redis:latest
   port: 6379
   replicaCount: 1
   type: ClusterIP
