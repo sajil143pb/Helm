@@ -3,7 +3,7 @@ name: nginx-node-redis-helm-chart
 description: A nodejs + redis application with nginx ingress controller using Helm.
 
 # A chart can be either an 'application' or a 'library' chart.
-#
+# 
 # Application charts are a collection of templates that can be packaged into versioned archives
 # to be deployed.
 #
