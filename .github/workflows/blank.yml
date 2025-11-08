@@ -47,8 +47,8 @@ jobs:
       - name: Merge and update index.yaml
         run: |
           helm repo index docs \
-            --url https://sajil143pb.github.io/Helm/ \
-            --merge docs/index.yaml || helm repo index docs --url https://sajil143pb.github.io/Helm/
+            --url https://sajilpb.github.io/Helm/ \
+            --merge docs/index.yaml || helm repo index docs --url https://sajil1pb.github.io/Helm/
 
       # ✅ Upload generated Helm repo as Pages artifact
       - name: Upload artifact
