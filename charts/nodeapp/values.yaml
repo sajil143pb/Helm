@@ -89,7 +89,7 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   hosts:
-    - host: dev.devops-s.live
+    - host: devops-s.live
       paths:
         - path: / 
           pathType: Prefix
