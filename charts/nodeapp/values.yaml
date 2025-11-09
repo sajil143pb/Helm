@@ -5,7 +5,7 @@ node:
   name: node
   image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:latest
   port: 5000
-  replicaCount: 3
+  replicaCount: 1
   type: ClusterIP
   resources:
   limits:
@@ -89,17 +89,18 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   hosts:
-    - host: devops-s.live
+    - host: sajil.click
       paths:
         - path: / 
           pathType: Prefix
+          backend:
+            service:
+              port:
+                number: 80      
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
-service:
-  type: ClusterIP
-  port: 80
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
