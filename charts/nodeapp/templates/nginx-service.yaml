@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "nodeapp.fullname" . }}-nginx
+  name: nginx
   labels:
     {{- include "nodeapp.labels" . | nindent 4 }}
 spec:
