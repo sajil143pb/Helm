@@ -5,7 +5,7 @@ node:
   name: node
   image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:latest
   port: 5000
-  targetPort: 80
+  targetPort: 5000
   replicaCount: 1
   type: ClusterIP
   resources:
