@@ -8,7 +8,7 @@ spec:
   type: {{ .Values.redis.type }}
   ports:
     - port: {{ .Values.redis.port }}
-      targetPort: http
+      targetPort: {{ .Values.redis.port }}
       protocol: TCP
       name: http
   selector:
