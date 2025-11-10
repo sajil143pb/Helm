@@ -8,7 +8,7 @@ spec:
   type: {{ .Values.nginx.type }}
   ports:
     - port: {{ .Values.nginx.port }}
-      targetPort: http
+      targetPort: {{ .Values.nginx.targetPort }}
       protocol: TCP
       name: http
   selector:
