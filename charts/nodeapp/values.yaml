@@ -90,7 +90,8 @@ ingress:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    external-dns.alpha.kubernetes.io/hostname: sajil.click
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80,"HTTPS":443}]'
+    external-dns.alpha.kubernetes.io/hostname: sajil.click,rollouts.sajil.click
 
   hosts:
     - host: sajil.click
@@ -101,7 +102,18 @@ ingress:
             service:
               name: nginx
               port:
-                number: 80      
+                number: 80
+
+    - host: rollouts.sajil.click
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argo-rollouts-dashboard
+                port:
+                  number: 3100  
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
