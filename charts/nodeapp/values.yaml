@@ -105,15 +105,14 @@ ingress:
                 number: 80
 
     - host: rollouts.sajil.click
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: argo-rollouts-dashboard
-                port:
-                  number: 3100  
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: argo-rollouts-dashboard
+              port:
+                number: 3100  
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
