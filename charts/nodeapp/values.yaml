@@ -83,8 +83,8 @@ securityContext: {}
   # runAsUser: 1000
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+namespaceOverride: default
 ingress:
-  namespaceOverride: argocd
   enabled: true
   className: "alb"
   annotations:

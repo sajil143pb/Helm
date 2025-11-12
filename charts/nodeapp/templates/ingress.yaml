@@ -3,7 +3,7 @@
   kind: Ingress
   metadata:
     name: {{ include "nodeapp.fullname" . }}
-    namespace: {{ .Values.ingress.namespaceOverride | default .Release.Namespace }}
+    namespace: {{ .Values.namespaceOverride | default .Release.Namespace }}
     labels:
       {{- include "nodeapp.labels" . | nindent 4 }}
     {{- with .Values.ingress.annotations }}

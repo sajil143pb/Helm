@@ -1,5 +1,5 @@
+namespaceOverride: argocd
 ingress:
-  namespaceOverride: argocd
   enabled: true
   className: "alb"
   annotations:
