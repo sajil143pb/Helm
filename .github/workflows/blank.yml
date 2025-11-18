@@ -22,7 +22,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkoutrepository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -32,7 +32,7 @@ jobs:
         with:
           version: v3.14.0
 
-      - name: Prepare docs folder
+      - name: Prepare
         run: mkdir -p docs
 
       - name: Download existing index.yaml (if present)
@@ -40,7 +40,7 @@ jobs:
           git fetch origin main || true
           git checkout origin/main -- docs/index.yaml || echo "No existing index.yaml"
 
-      - name: Package Helm charts
+      - name: Package
         run: |
           helm package charts/* --destination docs
 
@@ -51,12 +51,12 @@ jobs:
             --merge docs/index.yaml || helm repo index docs --url https://sajil1pb.github.io/Helm/
 
       # ✅ Upload generated Helm repo as Pages artifact
-      - name: Upload artifact
+      - name: Uploadartifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
       # ✅ Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: DeploytoGitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
