@@ -92,7 +92,10 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: shared-alb
+    alb.ingress.kubernetes.io/backend-protocol: HTTP
     external-dns.alpha.kubernetes.io/hostname: sajil.click
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:955967371588:certificate/58f46507-48af-4497-a836-43fb56b6b351
+
 
   hosts:
     - host: sajil.click
