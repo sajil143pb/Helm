@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 node:
   name: node
-  image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:v1
+  image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:latest
   port: 5000
   targetPort: 5000
   replicaCount: 1
@@ -100,7 +100,7 @@ ingress:
 
 
   hosts:
-    - host: prod.sajil.click
+    - host: dev.sajil.click
       paths:
         - path: / 
           pathType: Prefix
