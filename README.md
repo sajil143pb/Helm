@@ -4,7 +4,7 @@ This repository contains the Helm charts for a sample application running on nod
 # How to install it?
 
 <pre>
- helm repo add Helm https://sajil143pb.github.io/Helm/
+ helm repo add Helm https://sajilpb.github.io/Helm/
  helm repo update
 </pre>
 
