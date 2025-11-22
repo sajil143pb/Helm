@@ -6,6 +6,7 @@ This repository contains the Helm charts for a sample application running on nod
 <pre>
  helm repo add Helm https://sajilpb.github.io/Helm/
  helm repo update
+ helm install Nodeapp myhelm/nodeapp
 </pre>
 
 
