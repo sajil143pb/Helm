@@ -8,21 +8,4 @@ This repository contains the Helm charts for a sample application running on nod
  helm repo update
 </pre>
 
-# Other charts and examples
-
-# 1. Install or upgrade the AWS Load Balancer Controller into kube-system
-<pre>
-helm repo add eks https://aws.github.io/eks-charts
-helm repo update
-</pre>
-
-Installation
-
-<pre>
-helm upgrade --install aws-load-balancer-controller eks/aws-load-balancer-controller \
-  -n kube-system \
-  --set clusterName=java-eks \
-  --set serviceAccount.create=false \
-  --set serviceAccount.name=aws-load-balancer-controller
-</pre>
 
