@@ -25,7 +25,19 @@ spec:
     canary:
       steps:
         - setWeight: 20
+        - analysis:
+            templates:
+              - templateName: {{ .Values.node.name }}-canary-analysis
+                args:
+                  - name: app
+                    value: {{ .Values.node.name | quote }}
         - pause: { duration: 30s }
         - setWeight: 50
+        - analysis:
+            templates:
+              - templateName: {{ .Values.node.name }}-canary-analysis
+                args:
+                  - name: app
+                    value: {{ .Values.node.name | quote }}
         - pause: { duration: 30s }
         - setWeight: 100
