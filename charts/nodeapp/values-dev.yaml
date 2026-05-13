@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 node:
   name: node
-  image: 955967371588.dkr.ecr.us-east-1.amazonaws.com/devopsautomation:latest
+  image: ghcr.io/sajilpb/docker:main
   port: 5000
   targetPort: 5000
   replicaCount: 1
