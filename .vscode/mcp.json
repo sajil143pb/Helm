@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "helm": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-kubernetes"
+      ]
+    }
+  }
+}
