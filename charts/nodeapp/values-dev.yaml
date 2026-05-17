@@ -47,7 +47,8 @@ nginx:
       memory: 256Mi
 
 argocd:
-  name: argocd 
+  enabled: true
+  name: argocd
   nameSpace: argocd
   domainname: argocd.sajil.click
 

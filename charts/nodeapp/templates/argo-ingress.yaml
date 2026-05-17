@@ -1,8 +1,11 @@
+{{- if .Values.argocd.enabled -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Values.argocd.name }}
   namespace: {{ .Values.argocd.nameSpace }}
+  labels:
+    {{- include "nodeapp.labels" . | nindent 4 }}
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -28,3 +31,4 @@ spec:
             name: argo-cd-argocd-server
             port:
               number: 80
+{{- end }}
