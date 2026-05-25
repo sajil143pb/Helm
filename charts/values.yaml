@@ -1,8 +1,0 @@
-serviceAccount:
-  create: true
-  automount: true
-  annotations: {}
-  name: ""
-
-autoscaling:
-  enabled: false
